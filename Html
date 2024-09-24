@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerimaan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Penerimaan Peserta</h1>
+    <label for="name">Masukkan Nama:</label>
+    <input type="text" id="name" placeholder="Nama Anda">
+    <button onclick="checkAcceptance()">Cek Penerimaan</button>
+
+    <div id="result"></div>
+
+    <script>
+        const acceptedNames = ["Ali", "Budi", "Siti"]; // Daftar nama yang diterima
+
+        function checkAcceptance() {
+            const name = document.getElementById("name").value;
+            const resultDiv = document.getElementById("result");
+
+            if (acceptedNames.includes(name)) {
+                resultDiv.textContent = `${name} diterima.`;
+            } else {
+                resultDiv.textContent = `${name} tidak diterima.`;
+            }
+        }
+    </script>
+</body>
+</html>
